@@ -63,7 +63,6 @@
      HAL_GPIO_Init(GPIOG, &pins);
  }
  
- /* approximately 100 kHz with a 4 MHz peripheral clock */
  void init_i2c(void)
  {
      hi2c2.Instance = I2C2;
@@ -104,7 +103,7 @@
      HAL_Delay(100);
  }
  
- /* convert to mg and print without floating-point printf */
+ /* convert to mg and print */
  void print_axis(char axis, int16_t raw)
  {
      char text[64];
